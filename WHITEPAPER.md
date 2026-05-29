@@ -1125,20 +1125,18 @@ sequenceDiagram
     end
     Application-->>User: Return CV
 ```
-- Claude Haiku: 94.1% compliance (σ=1.7), Cost: $1.85 per resume (testing only)
 
-Keyword Extraction (Test Set: 1,000 JDs):
+### Keyword Extraction (Test Set: 1,000 JDs):
 - Gemini Flash: 91.2% recall (σ=1.9), Cost: $0.12 per JD
 - GPT-4o-mini: 89.7% recall (σ=2.3), Cost: $0.25 per JD
 - Mistral 8x7B: 84.3% recall (σ=3.1), Cost: $0.08 per JD
-```
+
 
 The model selection strategy implements **cost-performance optimization** through:
 1. **Use Case Specialization**: Different models assigned to specific tasks based on empirical performance
 2. **Fallback Hierarchy**: Multi-tier fallback ensures service continuity
 3. **Cost Monitoring**: Token usage tracked per operation to optimize spending
 4. **Continuous Evaluation**: Regular benchmarking against new model releases |
-
 ---
 
 ## 5. Empirical Results and Validation
