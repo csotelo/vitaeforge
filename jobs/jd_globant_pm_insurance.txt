@@ -1,0 +1,38 @@
+Product Manager Semi Senior Level - Insurance experience
+Globant | Peru (Remote)
+
+We are looking for a Product Manager Semi Senior Level with Insurance industry experience to join our team at Globant. This role is critical to helping business partners evolve and adapt to consumers' personalized expectations in this new technological era, creating digital products that people love.
+
+Responsibilities:
+- Define and own the product vision, strategy, and roadmap for insurance digital products
+- Gather and prioritize product and customer requirements by working closely with stakeholders
+- Write detailed user stories, acceptance criteria, and functional specifications
+- Lead agile ceremonies: sprint planning, backlog refinement, retrospectives, and daily standups
+- Collaborate with UX/UI designers, engineering teams, and QA to deliver high-quality features
+- Work with insurance domain experts and clients to understand business processes and regulatory requirements
+- Define and monitor KPIs and OKRs to measure product success and drive data-informed decisions
+- Facilitate communication between business stakeholders and technical teams
+- Drive digital transformation initiatives leveraging AI and emerging technologies
+- Identify market trends and competitive landscape in the insurance sector
+- Manage product delivery across multiple teams in an agile/scrum environment
+- Ensure products meet compliance and regulatory requirements of the insurance industry
+
+Requirements:
+- 3-5 years of experience as a Product Manager or Product Owner
+- Experience in the insurance industry (P&C, life insurance, health insurance, or insurtech)
+- Strong knowledge of agile methodologies (Scrum, Kanban, SAFe)
+- Experience writing user stories and managing product backlogs (Jira, Confluence)
+- Ability to translate business needs into technical requirements
+- Strong analytical and problem-solving skills
+- Data-driven mindset with experience in product analytics and KPI definition
+- Excellent communication and stakeholder management skills
+- Fluent English B2+ Upper Intermediate or higher (mandatory)
+- Experience working with cross-functional and distributed teams
+
+Nice to have:
+- CSPO, PSPO, or PMP certification
+- Experience with digital transformation projects in insurance
+- Knowledge of insurance core systems (policy management, claims, billing)
+- Familiarity with AI/ML applications in insurance (fraud detection, underwriting automation)
+- Experience with API-driven product development and microservices
+- Previous experience in a consulting or IT services company

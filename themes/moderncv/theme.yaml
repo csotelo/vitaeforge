@@ -1,0 +1,36 @@
+theme_name: moderncv
+
+sections:
+  - key: summary
+    name: summary
+    optional: false
+  - key: experience
+    name: experience
+    optional: false
+  - key: entrepreneurship_experience
+    name: entrepreneurship_experience
+    optional: true
+  - key: skills
+    name: skills
+    optional: true
+  - key: education
+    name: education
+    optional: true
+  - key: courses_and_certifications
+    name: courses_and_certifications
+    optional: true
+  - key: certifications
+    name: certifications
+    optional: true
+  - key: other_achievements
+    name: other_achievements
+    optional: true
+  - key: projects
+    name: projects
+    optional: true
+  - key: languages
+    name: languages
+    optional: true
+
+design:
+  theme: moderncv

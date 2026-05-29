@@ -1,0 +1,86 @@
+theme_name: globant
+
+sections:
+  - key: summary
+    name: career_summary
+    optional: false
+  - key: ats_keywords
+    name: summary_of_qualifications
+    optional: true
+    requires_profile: true
+  - key: languages
+    name: languages
+    optional: true
+  - key: projects
+    name: projects
+    optional: true
+  - key: experience
+    name: career_history
+    optional: false
+  - key: entrepreneurship_experience
+    name: entrepreneurship
+    optional: true
+
+design:
+  theme: globant
+  page:
+    size: a4
+    top_margin: 2cm
+    show_footer: false
+    show_top_note: false
+  typography:
+    font_family:
+      body: Libertinus Serif
+      name: Libertinus Serif
+      headline: Libertinus Serif
+      connections: Libertinus Serif
+      section_titles: Libertinus Serif
+    font_size:
+      name: 20pt
+      section_titles: 1.1em
+    bold:
+      name: true
+      section_titles: true
+  colors:
+    name: "rgb(0,0,0)"
+    connections: "rgb(80,80,80)"
+    section_titles: "rgb(0,0,0)"
+    links: "rgb(0,0,0)"
+  links:
+    underline: false
+    show_external_link_icon: false
+  section_titles:
+    type: with_full_line
+    space_above: 0.4cm
+    space_below: 0.2cm
+  header:
+    alignment: left
+    connections:
+      separator: " | "
+      show_icons: false
+      display_urls_instead_of_usernames: false
+  sections:
+    show_time_spans_in: []
+  entries:
+    short_second_row: false
+    side_space: 0cm
+    date_and_location_width: 0.01cm
+    space_between_columns: 0cm
+    highlights:
+      bullet: "•"
+      space_left: 0cm
+      space_above: 0.1cm
+      space_between_items: 0.1cm
+  templates:
+    experience_entry:
+      main_column: "**COMPANY**, LOCATION\n**POSITION**\nSUMMARY\nHIGHLIGHTS"
+      date_and_location_column: DATE
+    education_entry:
+      main_column: "**INSTITUTION**, LOCATION\nDEGREE in AREA\nSUMMARY\nHIGHLIGHTS"
+      date_and_location_column: DATE
+      degree_column: null
+    normal_entry:
+      main_column: "**NAME**\nSUMMARY\nHIGHLIGHTS"
+      date_and_location_column: DATE
+    one_line_entry:
+      main_column: LABEL

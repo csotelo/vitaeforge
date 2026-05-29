@@ -1,0 +1,29 @@
+Senior Python Developer
+
+We are looking for a Senior Python Developer to join our engineering team and help build and scale our data and backend platform.
+
+Responsibilities:
+- Design, develop, and maintain high-quality Python services and APIs
+- Build and maintain data pipelines and ETL processes
+- Collaborate with data engineers and ML engineers to deploy models into production
+- Write clean, testable code with strong unit and integration test coverage
+- Participate in code reviews and contribute to technical architecture decisions
+- Optimize performance of existing systems and databases
+- Work with cloud infrastructure (AWS or GCP) to deploy and monitor services
+
+Requirements:
+- 5+ years of Python development experience
+- Strong knowledge of Python frameworks: FastAPI, Django, or Flask
+- Experience with data engineering tools: Apache Spark, Airflow, dbt
+- Proficiency with relational (PostgreSQL, MySQL) and NoSQL (MongoDB, Redis) databases
+- Familiarity with containerization (Docker, Kubernetes)
+- Experience with CI/CD pipelines (GitHub Actions, Jenkins)
+- Solid understanding of software design patterns and SOLID principles
+- Experience with cloud platforms: AWS (Lambda, S3, RDS) or GCP (BigQuery, Cloud Run)
+- Strong communication skills and ability to work in agile/scrum teams
+
+Nice to have:
+- Experience with machine learning frameworks (TensorFlow, PyTorch, scikit-learn)
+- Knowledge of streaming platforms (Kafka, Pub/Sub)
+- Contributions to open-source projects
+- Experience with microservices and event-driven architecture

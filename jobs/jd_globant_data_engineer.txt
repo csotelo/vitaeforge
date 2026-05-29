@@ -1,0 +1,39 @@
+Data Engineer, Python and Cloud Services — Senior Level 1
+Globant | Peru (Hybrid)
+
+We are looking for a Senior Data Engineer with strong Python and Cloud Services expertise to join Globant's data practice. You will design and implement scalable data solutions for global clients undergoing digital transformation.
+
+Responsibilities:
+- Design, build, and maintain scalable data pipelines and ETL/ELT processes
+- Develop data ingestion frameworks using Python and cloud-native services
+- Implement and optimize data warehouses and data lakes on AWS or GCP
+- Work with Apache Spark for large-scale distributed data processing
+- Build and maintain real-time and batch data pipelines
+- Collaborate with data scientists and ML engineers to productionize models
+- Define data architecture patterns and best practices for client projects
+- Ensure data quality, lineage, and governance across pipelines
+- Participate in technical design and code reviews
+- Mentor junior engineers and contribute to the engineering community
+- Work in agile/scrum teams delivering data products for enterprise clients
+
+Requirements:
+- 5+ years of experience in data engineering
+- Strong Python programming skills (pandas, PySpark, SQLAlchemy, boto3)
+- Experience with Apache Spark for distributed data processing
+- Proficiency with cloud platforms: AWS (S3, Glue, Lambda, Redshift, EMR) or GCP (BigQuery, Dataflow, Cloud Storage, Pub/Sub)
+- Experience with SQL and NoSQL databases (PostgreSQL, MySQL, MongoDB, DynamoDB)
+- Knowledge of data pipeline orchestration tools (Apache Airflow, AWS Step Functions)
+- Experience with data warehouse design (star schema, data vault, dimensional modeling)
+- Familiarity with dbt for data transformation
+- Version control with Git and CI/CD pipelines
+- Experience working in agile environments
+- Fluent English B2+ Upper Intermediate (mandatory)
+
+Nice to have:
+- Experience with streaming platforms (Kafka, Kinesis, Pub/Sub)
+- Knowledge of data governance and data quality frameworks (Great Expectations, dbt tests)
+- Familiarity with containerization (Docker, Kubernetes)
+- Experience with infrastructure as code (Terraform, CloudFormation)
+- AWS Certified Data Analytics or GCP Professional Data Engineer certification
+- Experience in consulting or IT services companies
+- Knowledge of machine learning pipelines (MLflow, SageMaker, Vertex AI)

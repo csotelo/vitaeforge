@@ -1,0 +1,32 @@
+Tsoft S.A. — Project Manager / Product Manager (Fintech / Payments)
+
+Facilitamos un uso inteligente de la tecnología, potenciando a las personas y generando resultados de valor.
+
+En Tsoft brindamos asistencia a los máximos responsables de las áreas de IT de nuestros clientes en el cambio organizacional, para lograr mejoras en el gobierno y gestión de sus tecnologías de la información y comunicaciones.
+
+Somos más de 1000 personas y conformamos un equipo de profesionales certificados en múltiples tecnologías y con experiencia en diversas metodologías de valor para las áreas clave de IT. Día a día trabajamos estrechamente con nuestros clientes, procurando conocer su negocio y estando atentos a sus necesidades e inquietudes.
+
+What You'll Do
+Establish a clear vision and long-term roadmap aligned with company goals and Peru's financial inclusion objectives.
+Identify market opportunities and create strategies to address them – from Open Finance Pix flows to one-tap payments.
+Make data-driven decisions while balancing customer needs and business objectives.
+Work cross-functionally with engineering, design, and marketing teams to build and launch products.
+Reduce time-to-market for merchants and banks by delivering a solid, locally-flavored product suite.
+Own the product's resilience – because in payments, downtime is not an option.
+
+Who You Are / Qualifications
+Bachelor's degree in a relevant field (Engineering / Computer Science preferred).
+Minimum 2 years of experience in a product role (Engineer, Lead, Product Manager, or similar).
+Strong analytical and problem-solving skills with a data-driven mindset.
+Excellent written and verbal communication in English and Spanish.
+Ability to collaborate across teams and manage multiple stakeholders.
+
+Bonus Points (Highly Valued)
+Penchant for programming or technical background – you can read code or understand system architecture.
+Keen and active interest in UX design – you care about every click.
+Experience in fintech, payments, or financial services.
+
+The Mindset
+System Builder: You think from first principles. You understand – or want to understand – how things work deeply, from the database to the user's thumb.
+Chaos Engineer: You believe the best way to ensure resilience is to try and break everything. Proactively explore failure modes for your product.
+Responsible PM: You have the confidence to say, "The product I own will not go down." You plan ahead because you've already tested the nightmares – in pre-production, with chaos experiments, and by thinking about edge cases.

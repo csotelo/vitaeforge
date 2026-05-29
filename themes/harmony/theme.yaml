@@ -1,0 +1,110 @@
+theme_name: harmony
+one_page: true
+
+sections:
+  - key: summary
+    name: Profile
+    optional: true
+    requires_profile: true
+  - key: experience
+    name: Employment History
+    optional: false
+    max_entries: 8
+    max_bullets: 1
+  - key: entrepreneurship_experience
+    name: Entrepreneurship
+    optional: true
+    max_entries: 3
+    max_bullets: 1
+  - key: education
+    name: Education
+    optional: false
+    max_entries: 2
+  - key: certifications
+    name: Certifications
+    optional: true
+    max_entries: 6
+  - key: courses_and_certifications
+    name: Courses & Certifications
+    optional: true
+    max_entries: 4
+  - key: skills
+    name: Skills
+    optional: true
+    max_entries: 5
+  - key: projects
+    name: Projects
+    optional: true
+    max_entries: 4
+  - key: languages
+    name: Languages
+    optional: true
+
+design:
+  theme: harmony
+  page:
+    size: a4
+    top_margin: 0.75cm
+    bottom_margin: 0.75cm
+    left_margin: 6.5cm
+    right_margin: 1.0cm
+    show_footer: false
+    show_top_note: false
+  typography:
+    font_family:
+      body: Raleway
+      name: Raleway
+      headline: Raleway
+      connections: Raleway
+      section_titles: Raleway
+    font_size:
+      body: 9pt
+      name: 20pt
+      headline: 9pt
+      connections: 8pt
+      section_titles: 11pt
+    bold:
+      name: true
+      section_titles: false
+    alignment: left
+  colors:
+    name: "rgb(30,30,30)"
+    connections: "rgb(70,70,70)"
+    section_titles: "rgb(198,138,42)"
+    links: "rgb(90,90,100)"
+  links:
+    underline: false
+    show_external_link_icon: false
+  header:
+    alignment: left
+    connections:
+      separator: " "
+      show_icons: false
+      display_urls_instead_of_usernames: false
+    space_below_name: 0.1cm
+    space_below_headline: 0.1cm
+    space_below_connections: 0.2cm
+  section_titles:
+    type: with_full_line
+    space_above: 0.36cm
+    space_below: 0.28cm
+    line_thickness: 0.6pt
+  sections:
+    allow_page_break: false
+    space_between_regular_entries: 0.34cm
+    space_between_text_based_entries: 0.1cm
+    show_time_spans_in: []
+  entries:
+    short_second_row: false
+    side_space: 0cm
+    space_between_columns: 0.1cm
+    date_and_location_width: 3.0cm
+    allow_page_break: false
+    summary:
+      space_above: 0.05cm
+    highlights:
+      bullet: "•"
+      space_left: 0.2cm
+      space_above: 0.04cm
+      space_between_items: 0.04cm
+      space_between_bullet_and_text: 0.3em
