@@ -1,5 +1,5 @@
 ---
-title: VitaeForge: Breaking the ATS Barrier
+title: "VitaeForge: Breaking the ATS Barrier"
 published: true
 description: I built VitaeForge to stop getting filtered out by ATS. Open-source CLI using hexagonal architecture, AI-powered ATS scoring, and CAR bullet generation. One command from cv.yaml to tailored PDF.
 tags: python, ai, ats, career
@@ -87,18 +87,7 @@ As a developer, I also used this project to practice **Product Owner and Technic
 
 3 out of 4 resumes never reach a human. When they do, the reviewer spends 7 seconds.
 
-```mermaid
-flowchart LR
-    A[Candidate submits resume] --> B[ATS parses document]
-    B --> C{Keyword match?}
-    C -->|No| D[❌ Auto-rejected]
-    C -->|Yes| E{Format readable?}
-    E -->|No| D
-    E -->|Yes| F{Score above threshold?}
-    F -->|No| D
-    F -->|Yes| G[✅ Reaches human reviewer]
-    G --> H[7 seconds of attention]
-```
+![ATS rejection flow](https://mermaid.ink/img/Zmxvd2NoYXJ0IExSCiAgICBBW0NhbmRpZGF0ZSBzdWJtaXRzIHJlc3VtZV0gLS0-IEJbQVRTIHBhcnNlcyBkb2N1bWVudF0KICAgIEIgLS0-IEN7S2V5d29yZCBtYXRjaD99CiAgICBDIC0tPnxOb3wgRFvinYwgQXV0by1yZWplY3RlZF0KICAgIEMgLS0-fFllc3wgRXtGb3JtYXQgcmVhZGFibGU_fQogICAgRSAtLT58Tm98IEQKICAgIEUgLS0-fFllc3wgRntTY29yZSBhYm92ZSB0aHJlc2hvbGQ_fQogICAgRiAtLT58Tm98IEQKICAgIEYgLS0-fFllc3wgR1vinIUgUmVhY2hlcyBodW1hbiByZXZpZXdlcl0KICAgIEcgLS0-IEhbNyBzZWNvbmRzIG9mIGF0dGVudGlvbl0)
 
 ### 2.2 How ATS Screens Resumes
 
@@ -150,27 +139,7 @@ I used the **ATDD skill for Claude Code** — not the full framework. It gave me
 **Hexagonal Architecture (Ports & Adapters)**
 Domain logic has zero external dependencies. AI providers, file I/O, and the PDF renderer are all infrastructure. The domain only knows about the `AIPort` interface. This made it trivial to swap models and test business logic in isolation.
 
-```mermaid
-flowchart TD
-    subgraph Domain
-        UC[Use Cases\nATSScorer · ExperienceEnricher\nJDAnalyzer · ProfileGenerator]
-        M[Models\nCVData · Experience\nLocalizedString]
-        P[AIPort interface]
-    end
-    subgraph Infrastructure
-        OA[OpenAI Adapter]
-        AA[Anthropic Adapter]
-        GA[Google Adapter]
-        OL[Ollama Adapter]
-        R[rendercv Runner]
-        L[YAML Loaders]
-    end
-    P --> OA & AA & GA & OL
-    UC --> P
-    UC --> M
-    UC --> R
-    UC --> L
-```
+![Domain architecture](https://mermaid.ink/img/Zmxvd2NoYXJ0IFRECiAgICBzdWJncmFwaCBEb21haW4KICAgICAgICBVQ1tVc2UgQ2FzZXNcbkFUU1Njb3JlciDCtyBFeHBlcmllbmNlRW5yaWNoZXJcbkpEQW5hbHl6ZXIgwrcgUHJvZmlsZUdlbmVyYXRvcl0KICAgICAgICBNW01vZGVsc1xuQ1ZEYXRhIMK3IEV4cGVyaWVuY2VcbkxvY2FsaXplZFN0cmluZ10KICAgICAgICBQW0FJUG9ydCBpbnRlcmZhY2VdCiAgICBlbmQKICAgIHN1YmdyYXBoIEluZnJhc3RydWN0dXJlCiAgICAgICAgT0FbT3BlbkFJIEFkYXB0ZXJdCiAgICAgICAgQUFbQW50aHJvcGljIEFkYXB0ZXJdCiAgICAgICAgR0FbR29vZ2xlIEFkYXB0ZXJdCiAgICAgICAgT0xbT2xsYW1hIEFkYXB0ZXJdCiAgICAgICAgUltyZW5kZXJjdiBSdW5uZXJdCiAgICAgICAgTFtZQU1MIExvYWRlcnNdCiAgICBlbmQKICAgIFAgLS0-IE9BICYgQUEgJiBHQSAmIE9MCiAgICBVQyAtLT4gUAogICAgVUMgLS0-IE0KICAgIFVDIC0tPiBSCiAgICBVQyAtLT4gTA)
 
 ### 3.2 Development Workflow
 
@@ -198,20 +167,7 @@ Keeping roles separate prevented the model from drifting into solving adjacent p
 
 Work was organized in short cycles. Each feature followed this sequence:
 
-```mermaid
-sequenceDiagram
-    participant BA as BA Role
-    participant Arch as Architect Role
-    participant Eng as Engineer Role
-    participant QA as QA Role
-
-    BA->>Arch: User story + Gherkin criteria
-    Arch->>Eng: Architecture approach + constraints
-    Eng->>QA: Implementation
-    QA->>Eng: Failures / edge cases
-    Eng->>QA: Fixed implementation
-    QA-->>BA: ✅ Acceptance criteria pass
-```
+![Feature dev sequence](https://mermaid.ink/img/c2VxdWVuY2VEaWFncmFtCiAgICBwYXJ0aWNpcGFudCBCQSBhcyBCQSBSb2xlCiAgICBwYXJ0aWNpcGFudCBBcmNoIGFzIEFyY2hpdGVjdCBSb2xlCiAgICBwYXJ0aWNpcGFudCBFbmcgYXMgRW5naW5lZXIgUm9sZQogICAgcGFydGljaXBhbnQgUUEgYXMgUUEgUm9sZQogICAgQkEtPj5BcmNoOiBVc2VyIHN0b3J5ICsgR2hlcmtpbiBjcml0ZXJpYQogICAgQXJjaC0-PkVuZzogQXJjaGl0ZWN0dXJlIGFwcHJvYWNoICsgY29uc3RyYWludHMKICAgIEVuZy0-PlFBOiBJbXBsZW1lbnRhdGlvbgogICAgUUEtPj5Fbmc6IEZhaWx1cmVzIC8gZWRnZSBjYXNlcwogICAgRW5nLT4-UUE6IEZpeGVkIGltcGxlbWVudGF0aW9uCiAgICBRQS0tPj5CQTog4pyFIEFjY2VwdGFuY2UgY3JpdGVyaWEgcGFzcw)
 
 1. Write acceptance criteria in Gherkin
 2. Get architect review of the approach
@@ -289,16 +245,7 @@ The key challenges encountered during development are documented in Section 6. A
 **1. Prompt quality beats model quality.**
 A well-constrained prompt on `gemini-flash` produced better output than an open prompt on `claude-sonnet`. The most effective elements were explicit "DO NOT" clauses, a required output format, and source anchoring. Start there before upgrading the model.
 
-```mermaid
-flowchart TD
-    A[Initial Prompt] --> B{Output quality?}
-    B -->|Good| C[Use in production]
-    B -->|Medium| D[Add constraints]
-    B -->|Poor| E[Revise structure]
-    D --> F[Add output format]
-    E --> F
-    F --> B
-```
+![Prompt refinement loop](https://mermaid.ink/img/Zmxvd2NoYXJ0IFRECiAgICBBW0luaXRpYWwgUHJvbXB0XSAtLT4gQntPdXRwdXQgcXVhbGl0eT99CiAgICBCIC0tPnxHb29kfCBDW1VzZSBpbiBwcm9kdWN0aW9uXQogICAgQiAtLT58TWVkaXVtfCBEW0FkZCBjb25zdHJhaW50c10KICAgIEIgLS0-fFBvb3J8IEVbUmV2aXNlIHN0cnVjdHVyZV0KICAgIEQgLS0-IEZbQWRkIG91dHB1dCBmb3JtYXRdCiAgICBFIC0tPiBGCiAgICBGIC0tPiBC)
 
 **2. Choose the right model for the task.**
 
@@ -395,27 +342,7 @@ The hexagonal architecture enables several critical capabilities:
 
 The `--jd` mode end-to-end flow:
 
-```mermaid
-sequenceDiagram
-    participant CLI
-    participant JDA as JDAnalyzer
-    participant ATS as ATSScorer
-    participant EE as ExperienceEnricher
-    participant GEN as cv_generator
-    participant RCV as rendercv
-
-    CLI->>JDA: raw JD text
-    JDA-->>CLI: JDAnalysis (keywords, role, seniority)
-    CLI->>ATS: CVData + JDAnalysis
-    ATS-->>CLI: ATSResult (score, matched, missing, headline)
-    CLI->>CLI: Show score → user confirms
-    CLI->>EE: CVData + JDAnalysis
-    EE-->>CLI: enriched CVData (CAR bullets)
-    CLI->>GEN: enriched CVData + theme + profile
-    GEN-->>CLI: rendercv YAML
-    CLI->>RCV: YAML file
-    RCV-->>CLI: PDF
-```
+![JD end-to-end sequence](https://mermaid.ink/img/c2VxdWVuY2VEaWFncmFtCiAgICBwYXJ0aWNpcGFudCBDTEkKICAgIHBhcnRpY2lwYW50IEpEQSBhcyBKREFuYWx5emVyCiAgICBwYXJ0aWNpcGFudCBBVFMgYXMgQVRTU2NvcmVyCiAgICBwYXJ0aWNpcGFudCBFRSBhcyBFeHBlcmllbmNlRW5yaWNoZXIKICAgIHBhcnRpY2lwYW50IEdFTiBhcyBjdl9nZW5lcmF0b3IKICAgIHBhcnRpY2lwYW50IFJDViBhcyByZW5kZXJjdgogICAgQ0xJLT4-SkRBOiByYXcgSkQgdGV4dAogICAgSkRBLS0-PkNMSTogSkRBbmFseXNpcyAoa2V5d29yZHMsIHJvbGUsIHNlbmlvcml0eSkKICAgIENMSS0-PkFUUzogQ1ZEYXRhICsgSkRBbmFseXNpcwogICAgQVRTLS0-PkNMSTogQVRTUmVzdWx0IChzY29yZSwgbWF0Y2hlZCwgbWlzc2luZywgaGVhZGxpbmUpCiAgICBDTEktPj5DTEk6IFNob3cgc2NvcmUg4oaSIHVzZXIgY29uZmlybXMKICAgIENMSS0-PkVFOiBDVkRhdGEgKyBKREFuYWx5c2lzCiAgICBFRS0tPj5DTEk6IGVucmljaGVkIENWRGF0YSAoQ0FSIGJ1bGxldHMpCiAgICBDTEktPj5HRU46IGVucmljaGVkIENWRGF0YSArIHRoZW1lICsgcHJvZmlsZQogICAgR0VOLS0-PkNMSTogcmVuZGVyY3YgWUFNTAogICAgQ0xJLT4-UkNWOiBZQU1MIGZpbGUKICAgIFJDVi0tPj5DTEk6IFBERg)
 
 #### 4.2.1 ATS Scoring System (`ats_scorer.py`)
 
@@ -502,18 +429,7 @@ The `cv_generator.py` function `generate_rendercv_yaml()` handles all section re
 
 VitaeForge avoids unnecessary AI calls through a hash-based invalidation strategy. Every time `vitaeforge --role` runs, it computes a SHA hash of `cv.yaml` and stores it in the profile's `_meta.cv_hash` field. On subsequent runs, if the hash hasn't changed, the cached profile summary and per-entry `profile_summaries` are reused — no AI call is made.
 
-```mermaid
-flowchart TD
-    A[vitaeforge --role] --> B[Compute SHA hash of cv.yaml]
-    B --> C{Hash matches\n_meta.cv_hash?}
-    C -->|Yes| D[Use cached summaries\nZero AI calls]
-    C -->|No| E[Call AI for profile summary]
-    E --> F[Call AI for each experience entry]
-    F --> G[Write new hash + summaries to profile.yaml]
-    D --> H[generate_rendercv_yaml]
-    G --> H
-    H --> I[rendercv → PDF]
-```
+![Hash cache flow](https://mermaid.ink/img/Zmxvd2NoYXJ0IFRECiAgICBBW3ZpdGFlZm9yZ2UgLS1yb2xlXSAtLT4gQltDb21wdXRlIFNIQSBoYXNoIG9mIGN2LnlhbWxdCiAgICBCIC0tPiBDe0hhc2ggbWF0Y2hlcyBfbWV0YS5jdl9oYXNoP30KICAgIEMgLS0-fFllc3wgRFtVc2UgY2FjaGVkIHN1bW1hcmllc1xuWmVybyBBSSBjYWxsc10KICAgIEMgLS0-fE5vfCBFW0NhbGwgQUkgZm9yIHByb2ZpbGUgc3VtbWFyeV0KICAgIEUgLS0-IEZbQ2FsbCBBSSBmb3IgZWFjaCBleHBlcmllbmNlIGVudHJ5XQogICAgRiAtLT4gR1tXcml0ZSBuZXcgaGFzaCArIHN1bW1hcmllcyB0byBwcm9maWxlLnlhbWxdCiAgICBEIC0tPiBIW2dlbmVyYXRlX3JlbmRlcmN2X3lhbWxdCiAgICBHIC0tPiBICiAgICBIIC0tPiBJW3JlbmRlcmN2IOKGkiBQREZd)
 
 ```yaml
 # people/carlos_sotelo/profiles/data_engineer__python_aws.yaml
@@ -559,18 +475,7 @@ Adding a new AI provider requires only a new entry in `registry.py` and an adapt
 
 **Auto-detection fallback**: if `VITAEFORGE_MODEL` is not set, the factory iterates a priority list and selects the first model whose API key is present in the environment:
 
-```mermaid
-flowchart TD
-    A[Start] --> B{VITAEFORGE_MODEL set?}
-    B -->|Yes| C[Use configured model]
-    B -->|No| D{gpt-4o-mini key present?}
-    D -->|Yes| E[Use gpt-4o-mini]
-    D -->|No| F{groq-llama key present?}
-    F -->|Yes| G[Use groq-llama]
-    F -->|No| H{gemini-flash key present?}
-    H -->|Yes| I[Use gemini-flash]
-    H -->|No| J[Continue down priority list...]
-```
+![Model fallback](https://mermaid.ink/img/Zmxvd2NoYXJ0IFRECiAgICBBW1N0YXJ0XSAtLT4gQntWSVRBRUZPUkdFX01PREVMIHNldD99CiAgICBCIC0tPnxZZXN8IENbVXNlIGNvbmZpZ3VyZWQgbW9kZWxdCiAgICBCIC0tPnxOb3wgRHtncHQtNG8tbWluaSBrZXkgcHJlc2VudD99CiAgICBEIC0tPnxZZXN8IEVbVXNlIGdwdC00by1taW5pXQogICAgRCAtLT58Tm98IEZ7Z3JvcS1sbGFtYSBrZXkgcHJlc2VudD99CiAgICBGIC0tPnxZZXN8IEdbVXNlIGdyb3EtbGxhbWFdCiAgICBGIC0tPnxOb3wgSHtnZW1pbmktZmxhc2gga2V5IHByZXNlbnQ_fQogICAgSCAtLT58WWVzfCBJW1VzZSBnZW1pbmktZmxhc2hdCiAgICBIIC0tPnxOb3wgSltDb250aW51ZSBkb3duIHByaW9yaXR5IGxpc3QuLi5d)
 
 ---
 
